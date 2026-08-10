@@ -1,0 +1,206 @@
+Component Name
+Abseil
+address_sorting
+AndroidX annotation library
+angle
+AOSP unified email
+AppAuth
+AppleReachability
+args4j
+astc-codec
+audio_to_tactile
+basis_universal
+bezier
+Boost
+BoringSSL
+Brotli
+bzip2
+c-ares
+calculators
+cblas
+ciede2000
+Closure Library
+combine-schedulers
+cppitertools
+cpu_features
+cpuinfo
+crashpad
+Crunchy Crypt
+Dagger
+Darts-clone
+dav1d
+dawn
+ecclesia
+Edge TPU (0)
+Edge TPU (1)
+Eigen 3
+Elemental2
+emdawnwebgpu
+emoji_metadata
+FBShimmer
+Filament
+filesystem
+Firebase
+Firebase Google Utilities
+FLAnimatedImage
+FlatBuffers
+FLEX
+fmdb
+fontconfig
+FP16
+fplbase
+freetype2
+from_libaom (0)
+from_libaom (1)
+FXdiv
+g711
+g722
+gcc_16_1_0
+geometrystream
+getopt
+giflib
+glslang
+Google APIs Client Library for Objective-C for REST
+Google Auto
+Google Runtime Environment
+Google Toolbox for Mac
+GRDB
+gRPC (0)
+gRPC (1)
+gRPC Protos
+Gson
+gtm_session_fetcher
+Guava JDK7
+Guice
+Halide
+harfbuzz
+isac_fft
+IsAppEncrypted
+J2CL
+J2ObjC
+Jakarta Inject
+java_annotations
+java_diff
+Joda-Convert
+Joda-Time
+JsInterop Annotations
+JsInterop Base
+JsInterop Generator
+json
+JsonCpp
+JSpecify
+JSR 250
+JSR 305
+JSR 330
+libffi
+libjpeg-turbo
+libpfm4
+libPhoneNumber_iOS
+libresample
+libSRTP
+liburing
+libvpx
+libwebm
+libwebp
+libyuv
+LLVM
+lodepng
+Lottie
+lss
+Lullaby
+magic_enum
+Masonry
+Material Components for iOS
+MDFInternationalization
+MDFSpritedAnimationView
+MDFTextAccessibility
+MediaPipe
+mime4j
+mini_chromium
+miniz
+minizip
+ml_drift
+ml_dtypes
+Mosys
+motion_animator
+motion_interchange
+motive
+Nano Protocol Buffers
+neon2sse
+nimbus
+Ogg
+Ooura FFT
+OpenCV
+OpenGL Extension Wrangler Library
+OpenGL Mathematics
+OpenGL Utility Library
+Opus audio codec
+opus_tools
+original
+OWASP html sanitizer
+PEGKit
+perfetto
+pfft
+PNG
+Portaudio
+program_image_remapper
+Promises
+protobuf (0)
+Protocol Buffers
+Protocol Buffers for Go v2
+Protocol Buffers for Java
+rpc_client
+Rust libbzip2 bindings
+Rust libc
+Rust libz bindings
+Rust libz bindings (Google patch)
+rust_port
+ruy
+Safe HTML types for TypeScript
+sha3
+shaderc
+sigslot
+Skia
+SnapKit
+speex
+speexdsp
+spirv_headers
+splitfile
+ssziparchive
+stb
+TensorFlow Lite Support
+TensorFlow Metadata
+Tensorflow model analysis
+TensorFlow Serving
+threejs
+Tink
+tiny_dds
+tinyexr
+TPCircularBuffer
+typescript
+tz database
+UDPA
+UICollectionViewLeftAlignedLayout
+UTF
+utf8_range
+validate
+vector_math
+vectorial
+vulkan_loader
+vulkan_memory_allocator
+vulkan_utility_libraries
+vulkan_volk
+web_ie11
+WebRTC
+WebRTC Audio
+X.Org
+XCB library
+xctest-dynamic-overlay
+XNNPACK
+Xplat Support Libraries
+xplat_java_code_checker
+xprof
+xxhash
+Zippy
+zlib
+Zstandard

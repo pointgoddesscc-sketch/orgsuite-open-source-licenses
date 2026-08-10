@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Open Source Licenses | OrgSuite Enterprise</title>
+  <meta name="description" content="Attribution list of open source components used in the application. Compiled for enterprise transparency and compliance.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            surface: '#1c1c1e',
+            surface2: '#2c2c2e',
+            accent: '#0a84ff'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background-color: #000; }
+    .license-item { transition: background-color 0.15s ease; }
+    .license-item:hover { background-color: #2c2c2e; }
+    #search:focus { outline: none; box-shadow: 0 0 0 2px #0a84ff; }
+  </style>
+</head>
+<body class="dark bg-black text-gray-100 min-h-screen font-sans antialiased">
+  <div class="max-w-2xl mx-auto px-4 py-8">
+    <header class="mb-8">
+      <div class="flex items-center justify-between mb-2">
+        <h1 class="text-2xl font-semibold tracking-tight">Open Source Licenses</h1>
+        <span class="text-xs text-gray-500 uppercase tracking-wider">OrgSuite</span>
+      </div>
+      <p class="text-sm text-gray-400 leading-relaxed">
+        This page provides an attribution list of third-party open source components used in the application.
+        Full license texts for each component are available in the original source repositories or the application's Settings &gt; Open Source Licenses section.
+        This compilation supports enterprise compliance, transparency, and audit requirements.
+      </p>
+    </header>
+
+    <div class="mb-6 sticky top-0 z-10 bg-black/90 backdrop-blur py-3 -mx-4 px-4">
+      <input
+        id="search"
+        type="search"
+        placeholder="Filter components..."
+        class="w-full bg-surface2 text-gray-100 placeholder-gray-500 rounded-xl px-4 py-3 text-sm border border-gray-800 focus:border-accent transition"
+        autocomplete="off"
+      />
+      <p class="text-xs text-gray-500 mt-2"><span id="count">205</span> components</p>
+    </div>
+
+    <ul id="license-list" class="space-y-0.5 rounded-2xl overflow-hidden border border-gray-800 bg-surface">
+    </ul>
+
+    <footer class="mt-10 pt-6 border-t border-gray-800 text-xs text-gray-500 space-y-2">
+      <p>Generated for enterprise documentation and live attribution. Data derived from application open source license listings.</p>
+      <p>© <span id="year"></span> OrgSuite Enterprise AI. All rights reserved. This page does not constitute legal advice.</p>
+      <p class="text-gray-600">Deployed live via Vercel · Production ready</p>
+    </footer>
+  </div>
+
+  <script>
+    const components = ["Abseil","address_sorting","AndroidX annotation library","angle","AOSP unified email","AppAuth","AppleReachability","args4j","astc-codec","audio_to_tactile","basis_universal","bezier","Boost","BoringSSL","Brotli","bzip2","c-ares","calculators","cblas","ciede2000","Closure Library","combine-schedulers","cppitertools","cpu_features","cpuinfo","crashpad","Crunchy Crypt","Dagger","Darts-clone","dav1d","dawn","ecclesia","Edge TPU (0)","Edge TPU (1)","Eigen 3","Elemental2","emdawnwebgpu","emoji_metadata","FBShimmer","Filament","filesystem","Firebase","Firebase Google Utilities","FLAnimatedImage","FlatBuffers","FLEX","fmdb","fontconfig","FP16","fplbase","freetype2","from_libaom (0)","from_libaom (1)","FXdiv","g711","g722","gcc_16_1_0","geometrystream","getopt","giflib","glslang","Google APIs Client Library for Objective-C for REST","Google Auto","Google Runtime Environment","Google Toolbox for Mac","GRDB","gRPC (0)","gRPC (1)","gRPC Protos","Gson","gtm_session_fetcher","Guava JDK7","Guice","Halide","harfbuzz","isac_fft","IsAppEncrypted","J2CL","J2ObjC","Jakarta Inject","java_annotations","java_diff","Joda-Convert","Joda-Time","JsInterop Annotations","JsInterop Base","JsInterop Generator","json","JsonCpp","JSpecify","JSR 250","JSR 305","JSR 330","libffi","libjpeg-turbo","libpfm4","libPhoneNumber_iOS","libresample","libSRTP","liburing","libvpx","libwebm","libwebp","libyuv","LLVM","lodepng","Lottie","lss","Lullaby","magic_enum","Masonry","Material Components for iOS","MDFInternationalization","MDFSpritedAnimationView","MDFTextAccessibility","MediaPipe","mime4j","mini_chromium","miniz","minizip","ml_drift","ml_dtypes","Mosys","motion_animator","motion_interchange","motive","Nano Protocol Buffers","neon2sse","nimbus","Ogg","Ooura FFT","OpenCV","OpenGL Extension Wrangler Library","OpenGL Mathematics","OpenGL Utility Library","Opus audio codec","opus_tools","original","OWASP html sanitizer","PEGKit","perfetto","pfft","PNG","Portaudio","program_image_remapper","Promises","protobuf (0)","Protocol Buffers","Protocol Buffers for Go v2","Protocol Buffers for Java","rpc_client","Rust libbzip2 bindings","Rust libc","Rust libz bindings","Rust libz bindings (Google patch)","rust_port","ruy","Safe HTML types for TypeScript","sha3","shaderc","sigslot","Skia","SnapKit","speex","speexdsp","spirv_headers","splitfile","ssziparchive","stb","TensorFlow Lite Support","TensorFlow Metadata","Tensorflow model analysis","TensorFlow Serving","threejs","Tink","tiny_dds","tinyexr","TPCircularBuffer","typescript","tz database","UDPA","UICollectionViewLeftAlignedLayout","UTF","utf8_range","validate","vector_math","vectorial","vulkan_loader","vulkan_memory_allocator","vulkan_utility_libraries","vulkan_volk","web_ie11","WebRTC","WebRTC Audio","X.Org","XCB library","xctest-dynamic-overlay","XNNPACK","Xplat Support Libraries","xplat_java_code_checker","xprof","xxhash","Zippy","zlib","Zstandard"];
+
+    const listEl = document.getElementById('license-list');
+    const searchEl = document.getElementById('search');
+    const countEl = document.getElementById('count');
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function render(items) {
+      listEl.innerHTML = items.map(name => `
+        <li class="license-item px-4 py-3.5 border-b border-gray-800/60 last:border-0 flex items-center justify-between">
+          <span class="text-[15px] text-gray-100">${name}</span>
+          <svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </li>
+      `).join('');
+      countEl.textContent = items.length;
+    }
+
+    render(components);
+
+    searchEl.addEventListener('input', (e) => {
+      const q = e.target.value.trim().toLowerCase();
+      const filtered = q
+        ? components.filter(c => c.toLowerCase().includes(q))
+        : components;
+      render(filtered);
+    });
+  </script>
+</body>
+</html>
