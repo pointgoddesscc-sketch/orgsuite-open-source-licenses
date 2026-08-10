@@ -1,21 +1,27 @@
-# OrgSuite Open Source Licenses Attribution
+# OrgSuite Command Center — Open Source Licenses
 
-Enterprise attribution list of **205** third-party open source components used in the application.
+Enterprise attribution + command-center module for **205** third-party open source components.
 
-## Live Page
+## Live Command Center
 **https://orgsuite-open-source-licenses.vercel.app**
 
-Searchable dark-themed list with client-side filtering.
+Features:
+- Searchable list with live filter (name + license)
+- 76 components tagged with SPDX license + direct links
+- One-click CSV and PDF downloads
+- Links to GitHub and Notion
+- OrgSuite branding and connectors status note
 
 ## Files
-- `index.html` — Production web page (also deployed on Vercel)
+- `index.html` — Full Command Center dashboard
+- `components.js` — Component data with license tags
 - `open-source-components.csv` — Machine-readable list
-- `Open_Source_Licenses_Attribution.pdf` — Formatted PDF for compliance / audit (available on the live site and locally)
+- `Open_Source_Licenses_Attribution.pdf` — Formatted PDF (generated; host on Vercel or download from artifacts)
 
 ## Purpose
 Supports enterprise compliance, transparency, and audit requirements. Full license texts remain in the original application Settings → Open Source Licenses or upstream repositories.
 
 ## OrgSuite
-Part of the OrgSuite Enterprise AI unified hub.
+Part of the OrgSuite Enterprise AI unified hub + secure domain + habit command center.
 
 Generated and maintained for production use.
